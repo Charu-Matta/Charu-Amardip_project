@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Finacial Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />
+
+<meta name="description" content="" />
+<!-- css -->
+<link href="{% static "css/style.css"%}" rel="stylesheet" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+ <script>
+$(function() {
+$( ".tabs" ).tabs();
+});
+</script>
+{% block css %}
+{% endblock %}
+</head>
+<body>
+<div id="header">
+ 	<img src="{% static "images/header-texture-3.jpg"%}" alt=""/>
+</div>
+<div id ="company-symbol">
+    <form  name = "myform"  action='.' method="POST" enctype="multipart/form-data">{% csrf_token %}
+        Company Symbol: <input type="text" name="ticker">
+        <input type="submit" value="submit">
+    </form>
+</div>
+<div class="tabs">
+    <ul>
+        <li><a href="#tabs-1">Financial Data</a></li>
+        <li><a href="#tabs-2">Person Data</a></li>
+        <li><a href="#tabs-3">Other Information</a></li>
+    </ul>
+    <div id="tabs-1">
+        <div class="tabs">
+            <ul>
+                <li><a href="#tabs-5">Share Pice</a></li>
+                <li><a href="#tabs-6">Income Statement</a></li>
+                <li><a href="#tabs-7">Balance Sheet</a></li>
+                <li><a href="#tabs-8">Cash Flow</a></li>   
+            </ul>
+             <div id = "tabs-5">
+                  <p>share price</p>
+             </div>
+            <div id = "tabs-6">
+                <p>Income Statement</p>
+            </div>
+            <div id = "tabs-7">
+                <p>Balance Sheet</p>
+            </div>
+            <div id = "tabs-8">
+                <p>Cash Flow</p>
+            </div>
+        </div>
+        
+    </div>
+    <div id="tabs-2">
+        <p>Data Source:- Bloomberg.com</p>
+    </div>
+    <div id="tabs-3">
+        <p>Data Source:- Reuters</p>
+    </div>
+</div>
+</body>
+</html>
