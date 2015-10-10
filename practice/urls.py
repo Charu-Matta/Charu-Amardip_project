@@ -18,5 +18,5 @@ from django.conf import settings
 
 urlpatterns = patterns('',
        url(r'', include('practice_app.urls')),
-       
+
 )

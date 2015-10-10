@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 
 
 def main_page(request):
+
     if request.method == 'POST':
         get_ticker(request)
     return render_to_response('main.html',{},context_instance=RequestContext(request))
@@ -14,4 +15,3 @@ def get_ticker(request):
     
     
     return render_to_response('main.html',{},context_instance=RequestContext(request))
-    

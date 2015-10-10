@@ -15,7 +15,9 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
  <script>
 $(function() {
+
 $( ".tabs" ).tabs();
+
 });
 </script>
 {% block css %}
@@ -25,6 +27,7 @@ $( ".tabs" ).tabs();
 <div id="header">
  	<img src="{% static "images/header-texture-3.jpg"%}" alt=""/>
 </div>
+
 <div id ="company-symbol">
     <form  name = "myform"  action='.' method="POST" enctype="multipart/form-data">{% csrf_token %}
         Company Symbol: <input type="text" name="ticker">
@@ -66,6 +69,7 @@ $( ".tabs" ).tabs();
     <div id="tabs-3">
         <p>Data Source:- Reuters</p>
     </div>
+
 </div>
 </body>
 </html>

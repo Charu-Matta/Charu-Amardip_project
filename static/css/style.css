@@ -13,10 +13,13 @@
     height:169px;
 }
 
+
 .tabs{
+
 	width:101%;
 	 margin-left: -11px;
 }
+
 
 .tabs a {
     padding: 0.5em 8em;
@@ -26,4 +29,5 @@
     height: 46px;
     margin-top: 11px;
     width: 25%;
+
 }
